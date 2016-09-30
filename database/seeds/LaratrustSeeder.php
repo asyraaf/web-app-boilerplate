@@ -16,6 +16,7 @@ class LaratrustSeeder extends Seeder
         
         $config = config('laratrust_seeder.role_structure');
         $mapPermission = collect(config('laratrust_seeder.permissions_map'));
+        $faker = Faker\Factory::create();
 
         foreach ($config as $key => $modules) {
             // Create a new role
@@ -56,8 +57,15 @@ class LaratrustSeeder extends Seeder
                 'email' => $key.'@app.com',
                 'password' => bcrypt('password'),
                 'remember_token' => str_random(10),
+                'phone' => $faker->regexify('[0-9]{12}'),
+                'ic' => $faker->regexify('[0-9]{4}-[0-9]{2}-[0-9]{4}')
             ]);
             $user->attachRole($role);
+
+            // create numbers of users randomly and attach current created role to the user
+            factory(\App\User::class, $faker->numberBetween(10,100))->create()->each(function($u) use ($role) {
+                $u->attachRole($role);
+            });
         }
     }
 
