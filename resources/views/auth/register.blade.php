@@ -66,6 +66,34 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('ic') ? ' has-error' : '' }}">
+                            <label for="password-confirm" class="col-md-4 control-label">IC Number</label>
+
+                            <div class="col-md-6">
+                                <input type="text" name="ic" id="ic" class="form-control" placeholder="860101-01-0101">
+
+                                @if ($errors->has('ic'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('ic') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
+                            <label for="password-confirm" class="col-md-4 control-label">Phone Number</label>
+
+                            <div class="col-md-6">
+                                <input type="text" name="phone" id="phone" class="form-control" placeholder="0197777777">
+
+                                @if ($errors->has('phone'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
