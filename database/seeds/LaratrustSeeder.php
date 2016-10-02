@@ -58,7 +58,7 @@ class LaratrustSeeder extends Seeder
                 'password' => bcrypt('password'),
                 'remember_token' => str_random(10),
                 'phone' => $faker->regexify('[0-9]{12}'),
-                'ic' => $faker->regexify('[0-9]{4}-[0-9]{2}-[0-9]{4}')
+                'ic' => $faker->regexify('[0-9]{6}-[0-9]{2}-[0-9]{4}')
             ]);
             $user->attachRole($role);
 

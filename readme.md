@@ -1,27 +1,61 @@
-# Laravel PHP Framework
+# Training Management System (TManSys)
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## TODO 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+1. Add relationship between models
+2. Workflow
+	As Administrator
+		manage trainings, annoucement, newsletter, email blast
+	As Trainer
+		upload slide, materials, portfolio, syllabus
+	As Organizer
+		update locations, training details, set castmycode id
+	As Participant
+		check in, feedback, testimonial, subscribe to training
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+```
+trainings [done]
+	id
+	trainer_id
+	venue_id
+	date_start
+	date_end
+	time_start
+	time_end
+	status
 
-## Official Documentation
+venues [done]
+	id
+	name
+	latitude
+	longitude
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+roles [done]
+	administrator
+	trainer
+	facilitator
+	participant
 
-## Contributing
+users [done]
+	id
+	name
+	ic
+	email
+	phone
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+training_participants [done]
+	training_id
+	user_id
+	absence 
+		(default 0)
+		1 - absence
+	status
+		(default 0)
+		1 - accomplished
+	feedback
+	testimonial
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+training_facilitators [done]
+	facilitator_id
+	user_id
+```
