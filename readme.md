@@ -1,61 +1,15 @@
-# Training Management System (TManSys)
+# Web Application Boilerplate
 
-## TODO 
+1. Clone this project
 
-1. Add relationship between models
-2. Workflow
-	As Administrator
-		manage trainings, annoucement, newsletter, email blast
-	As Trainer
-		upload slide, materials, portfolio, syllabus
-	As Organizer
-		update locations, training details, set castmycode id
-	As Participant
-		check in, feedback, testimonial, subscribe to training
+2. Setup `.env`
 
-```
-trainings [done]
-	id
-	trainer_id
-	venue_id
-	date_start
-	date_end
-	time_start
-	time_end
-	status
+3. Run `composer install`
 
-venues [done]
-	id
-	name
-	latitude
-	longitude
+4. Run `php artisan migrate`
 
-roles [done]
-	administrator
-	trainer
-	facilitator
-	participant
+5. Run `php artisan db:seed`
 
-users [done]
-	id
-	name
-	ic
-	email
-	phone
+## TODO
 
-training_participants [done]
-	training_id
-	user_id
-	absence 
-		(default 0)
-		1 - absence
-	status
-		(default 0)
-		1 - accomplished
-	feedback
-	testimonial
-
-training_facilitators [done]
-	facilitator_id
-	user_id
-```
+1. Require middleware to check if user not yet activate their account, redirect to resend activation account link
