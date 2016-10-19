@@ -2,9 +2,19 @@
 
 ## Installation
 
+Clone this boilerplate
+
 ```
 git clone https://github.com/cleaniquecoders/web-app-boilerplate.git
 ```
+
+Go into application directory and install all dependencies.
+
+```
+cd web-app-boilerplate && composer install
+```
+
+Update your database connection in `.env`.
 
 ## TODO
 
