@@ -2,6 +2,6 @@
 
 @section('content')
     <div class="content">
-        <div class="title">Be right back.</div>
+        <div class="title">Unauthorized access.</div>
     </div>
 @endsection
