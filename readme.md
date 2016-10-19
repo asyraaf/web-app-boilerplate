@@ -16,6 +16,18 @@ cd web-app-boilerplate && composer install
 
 Update your database connection in `.env`.
 
+## Login with Facebook
+
+Configure Facebook App Details in the `.env` file. Get the client id and secret from [Facebook for Developers](https://developers.facebook.com) by creating application.
+
+```
+FACEBOOK_CLIENT_ID=
+FACEBOOK_SECRET=
+FACEBOOK_REDIRECT=http://localhost:8000/auth/facebook/callback
+```
+
+You may want to refer to [this](https://www.youtube.com/watch?v=jBTEcvriY0U) tutorial if you have any issues with setting up the Facebook login.
+
 ## TODO
 
 - [x] Require middleware to check if user not yet activate their account, redirect to resend activation account link
@@ -24,4 +36,4 @@ Update your database connection in `.env`.
 - [ ] Laravel Passport, Consume Own API Middleware
 - [ ] Migrate User Manager using VueJs
 - [ ] Provide Installer for this boilerplate
-- [ ] Login with Facebook
+- [X] Login with Facebook

@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('auth/facebook', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/facebook/callback', 'Auth\AuthController@handleProviderCallback');
+
 Route::get('/account/activate/{token}', 'AccountController@activate');
 
 Route::group(['middleware' => ['active', 'auth']], function () {
