@@ -21,3 +21,7 @@ Update your database connection in `.env`.
 - [x] Require middleware to check if user not yet activate their account, redirect to resend activation account link
 - [x] User Manager
 - [x] Error pages - 403, 404, 500
+- [ ] Laravel Passport, Consume Own API Middleware
+- [ ] Migrate User Manager using VueJs
+- [ ] Provide Installer for this boilerplate
+- [ ] Login with Facebook
