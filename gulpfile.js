@@ -17,5 +17,6 @@ elixir(mix => {
     mix.sass('app.scss')
     	.copy('node_modules/bootstrap-sass/assets/fonts', 'public/fonts') // copy over fonts folders to public
 		.copy('node_modules/font-awesome/fonts', 'public/fonts') // copy over fonts folders to public
+		.webpack('delete.js')
     	.webpack('app.js');
 });
