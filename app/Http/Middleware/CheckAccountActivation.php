@@ -16,7 +16,7 @@ class CheckAccountActivation
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user()->activation->status == 0) {
+        if (Auth::user()->activation && Auth::user()->activation->status == 0) {
             Auth::logout();
             session()->flash('message', 'Please activate your account.');
             session()->flash('error', 1);
