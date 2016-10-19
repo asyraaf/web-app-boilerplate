@@ -1,14 +1,10 @@
 # Web Application Boilerplate
 
-1. Clone this project
+## Installation
 
-2. Setup `.env`
-
-3. Run `composer install`
-
-4. Run `php artisan migrate`
-
-5. Run `php artisan db:seed`
+```
+git clone https://github.com/cleaniquecoders/web-app-boilerplate.git
+```
 
 ## TODO
 
