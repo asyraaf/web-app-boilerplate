@@ -19,8 +19,11 @@ Auth::routes();
 
 Route::get('/account/activate/{token}', 'AccountController@activate');
 
-Route::get('/home', 'HomeController@index');
+Route::group(['middleware' => ['active', 'auth']], function () {
+    Route::get('home', 'HomeController@index');
 
-Route::group(['middleware' => ['auth']], function () {
-    Route::resource('users', 'UsersController');
+    // Administrator, Trainer and Facilitator only
+    Route::group(['middleware' => ['role:administrator|trainer|facilitator']], function () {
+        Route::resource('users', 'UsersController');
+    });
 });
