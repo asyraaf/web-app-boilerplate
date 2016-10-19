@@ -17,23 +17,23 @@ class TrainingSeeder extends Seeder
         \App\TrainingParticipant::truncate();
 
         factory(\App\Venue::class, 10)->create();
-        factory(\App\Training::class, 10)->create()->each(function($t) {
+        factory(\App\Training::class, 10)->create()->each(function ($t) {
 
             // need to randomly select from venues
             $venue = \App\Venue::inRandomOrder()->first();
-            $t->venue_id = $venue->id; 
+            $t->venue_id = $venue->id;
 
             // need to randomly select from administrator users
-            $creator = \App\User::with(['roles' => function ($query){
+            $creator = \App\User::with(['roles' => function ($query) {
                 return $query->where('name', 'administrator');
             }])->limit(1)->inRandomOrder()->first();
-        	$t->creator_id = $creator->id;
+            $t->creator_id = $creator->id;
 
             // need to randomly select from trainer users
             $trainer = \App\User::with(['roles' => function ($query) {
                 return $query->where('name', 'trainer');
             }])->limit(1)->inRandomOrder()->first();
-        	$t->trainer_id = $trainer->id; 
+            $t->trainer_id = $trainer->id;
 
             // add facilitators
             $facilitators = \App\User::with(['roles' => function ($query) {
@@ -42,7 +42,7 @@ class TrainingSeeder extends Seeder
             foreach ($facilitators as $key => $value) {
                 \App\TrainingFacilitator::create([
                     'user_id' => $value->id,
-                    'training_id' => $t->id
+                    'training_id' => $t->id,
                 ]);
             }
 
@@ -55,7 +55,7 @@ class TrainingSeeder extends Seeder
                     'user_id' => $value->id,
                     'training_id' => $t->id,
                     'absence' => 0,
-                    'status' => 0
+                    'status' => 0,
                 ]);
             }
 

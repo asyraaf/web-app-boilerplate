@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use Laratrust\Traits\LaratrustUserTrait;
 
 class User extends Authenticatable
@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-       'ic', 'name', 'email', 'password', 'phone'
+        'name', 'email', 'password',
     ];
 
     /**
@@ -29,7 +29,12 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function trainings() 
+    public function profile()
+    {
+        return $this->hasOne('App\Profile');
+    }
+
+    public function trainings()
     {
         return $this->belongsToMany('App\Training', 'training_participant');
     }

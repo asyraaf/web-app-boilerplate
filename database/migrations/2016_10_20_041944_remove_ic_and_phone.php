@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddIcColumn extends Migration
+class RemoveIcAndPhone extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,8 @@ class AddIcColumn extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('ic', 12)->index()->after('id');
-            $table->string('phone', 12)->after('email');
+            $table->dropColumn('ic');
+            $table->dropColumn('phone');
         });
     }
 
@@ -27,8 +27,8 @@ class AddIcColumn extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('ic');
-            $table->dropColumn('phone');
+            $table->string('ic', 12)->index()->after('id');
+            $table->string('phone', 12)->after('email');
         });
     }
 }
