@@ -2,10 +2,10 @@
 
 ## Installation
 
-Clone this boilerplate
+Create new project
 
 ```
-git clone https://github.com/cleaniquecoders/web-app-boilerplate.git
+composer create-project cleaniquecoders/web-app-boilerplate.git
 ```
 
 Go into application directory and install all dependencies.
@@ -28,6 +28,20 @@ FACEBOOK_REDIRECT=http://localhost:8000/auth/facebook/callback
 
 You may want to refer to [this](https://www.youtube.com/watch?v=jBTEcvriY0U) tutorial if you have any issues with setting up the Facebook login.
 
+## Login via API
+
+API endpoint to login, using http method of `POST`. Login using `email` and `password` field.
+
+```
+http://domain.com/api/auth
+```
+
+You should get something like this once you're successfully logged in.
+
+```
+{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdDo4MDAwXC9hcGlcL2F1dGgiLCJpYXQiOjE0NzY5NzMyOTAsImV4cCI6MTQ3Njk3Njg5MCwibmJmIjoxNDc2OTczMjkwLCJqdGkiOiJkYzY3NjMxOTQ3MzYzMmFjMjQ4ZDg0ODgzZTI1N2M3ZiJ9.k5b8ubtSTRi6T8_kqLbxzmN4atC2v4XKAvmyn4a2YEI"}
+```
+
 ## TODO
 
 - [x] Require middleware to check if user not yet activate their account, redirect to resend activation account link
@@ -36,4 +50,5 @@ You may want to refer to [this](https://www.youtube.com/watch?v=jBTEcvriY0U) tut
 - [ ] Laravel Passport, Consume Own API Middleware
 - [ ] Migrate User Manager using VueJs
 - [ ] Provide Installer for this boilerplate
-- [X] Login with Facebook
+- [x] Login with Facebook
+- [x] JWT
