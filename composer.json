@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
+    "name": "cleaniquecoders/web-app-boilerplate",
+    "description": "Web Application Boilerplate",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
