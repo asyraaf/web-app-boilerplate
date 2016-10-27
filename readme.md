@@ -5,7 +5,7 @@
 Create new project
 
 ```
-composer create-project cleaniquecoders/web-app-boilerplate.git
+composer create-project cleaniquecoders/web-app-boilerplate
 ```
 
 Go into application directory and install all dependencies.
@@ -18,7 +18,9 @@ Update your database connection in `.env`.
 
 ## Login with Facebook
 
-Configure Facebook App Details in the `.env` file. Get the client id and secret from [Facebook for Developers](https://developers.facebook.com) by creating application.
+Configure Facebook App Details in the `.env` file and set the `config/auth.php` the `oauth.facebook` key to true to enable login with Facebook.
+
+Get the client id and secret from [Facebook for Developers](https://developers.facebook.com) by creating application.
 
 ```
 FACEBOOK_CLIENT_ID=

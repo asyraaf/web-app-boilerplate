@@ -61,7 +61,7 @@
                         </div>
                     </form>
 
-                    @if(config('services.facebook'))
+                    @if(config('auth.oauth.facebook') && config('services.facebook'))
                         <hr>
                         <a href="{{ url('/auth/facebook') }}" class="btn btn-primary btn-block">
                           Login with Facebook

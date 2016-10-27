@@ -99,4 +99,11 @@ return [
         ],
     ],
 
+    'oauth' => [
+        'facebook' => false,
+        'twitter' => false,
+        'github' => false,
+        'google' => false,
+    ],
+
 ];
