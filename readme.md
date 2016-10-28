@@ -54,3 +54,4 @@ You should get something like this once you're successfully logged in.
 - [ ] Provide Installer for this boilerplate
 - [x] Login with Facebook
 - [x] JWT
+- [x] Laravel Collective
