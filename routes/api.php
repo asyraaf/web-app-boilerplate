@@ -13,6 +13,6 @@
 
 Route::post('auth', 'Auth\AuthController@authenticate');
 
-Route::group(['middleware' => ['jwt.auth']], function () {
+Route::group(['middleware' => ['active:1', 'jwt.auth']], function () {
     Route::get('user', 'Auth\AuthController@getAuthenticatedUser');
 });
