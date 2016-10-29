@@ -15,6 +15,8 @@ require('laravel-elixir-vue');
 
 elixir(mix => {
     mix.sass('app.scss')
+    	.sass('./node_modules/bulma/bulma.sass')
+    	.sass('./node_modules/font-awesome/scss/font-awesome.scss')
     	.copy('node_modules/bootstrap-sass/assets/fonts', 'public/fonts') // copy over fonts folders to public
 		.copy('node_modules/font-awesome/fonts', 'public/fonts') // copy over fonts folders to public
 		.webpack('delete.js')
