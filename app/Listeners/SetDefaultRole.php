@@ -2,10 +2,8 @@
 
 namespace App\Listeners;
 
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Auth\Events;
+use Illuminate\Auth\Events\Registered;
 
 class SetDefaultRole
 {
@@ -27,7 +25,7 @@ class SetDefaultRole
      */
     public function handle(Registered $event)
     {
-        $role = \App\Role::find(4);
+        $role = \App\Role::find(2);
         $event->user->attachRole($role);
     }
 }

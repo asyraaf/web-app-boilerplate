@@ -6,15 +6,7 @@ return [
             'users' => 'i,s,e,c,r,u,d',
             'profile' => 'r,u',
         ],
-        'trainer' => [
-            'users' => 'i,s,e,c,r,u,d',
-            'profile' => 'r,u',
-        ],
-        'facilitator' => [
-            'users' => 'i,s,e,c,r,u',
-            'profile' => 'r,u',
-        ],
-        'participant' => [
+        'public' => [
             'profile' => 'r,u',
         ],
     ],
