@@ -1,70 +1,40 @@
-
-<div class="row">
-    <div class="col-md-8 col-md-offset-2">
-        <div class="panel panel-default">
-            <div class="panel-heading">Login</div>
-            <div class="panel-body">
-                <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+<div class="section">
+<div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+        <div class="card is-fullwidth">
+            <header class="card-header">
+            <p class="card-header-title">
+              Login
+            </p>
+            </header>
+          <div class="card-content">
+            <div class="content">
+              <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                     {{ csrf_field() }}
 
-                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                        <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                    {!! Theme::partial('components.forms.email') !!}
 
-                        <div class="col-md-6">
-                            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                    {!! Theme::partial('components.forms.password') !!}
 
-                            @if ($errors->has('email'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('email') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-                    </div>
+                    {!! Theme::partial('components.forms.remember') !!}
 
-                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                        <label for="password" class="col-md-4 control-label">Password</label>
-
-                        <div class="col-md-6">
-                            <input id="password" type="password" class="form-control" name="password" required>
-
-                            @if ($errors->has('password'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('password') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-md-6 col-md-offset-4">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="remember"> Remember Me
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-md-8 col-md-offset-4">
-                            <button type="submit" class="btn btn-primary">
-                                Login
-                            </button>
-
-                            <a class="btn btn-link" href="{{ url('/password/reset') }}">
-                                Forgot Your Password?
+                    <p class="control">
+                        <button type="submit" class="button is-primary">Login</button>
+                        <a class="button is-link" href="{{ url('/password/reset') }}"> Forgot Your Password?</a>
+                        @if(config('auth.oauth.facebook') && config('services.facebook'))
+                            <a href="{{ url('/auth/facebook') }}" class="button  is-info is-pulled-right">
+                              <span class="icon"><i class="fa fa-facebook"></i></span><span> Facebook</span>
                             </a>
-                        </div>
-                    </div>
-                </form>
-
-                @if(config('auth.oauth.facebook') && config('services.facebook'))
+                        @endif
+                    </p>
                     <hr>
-                    <a href="{{ url('/auth/facebook') }}" class="btn btn-primary btn-block">
-                      Login with Facebook
-                    </a>
-                @endif
+                    <p class="control">
+                         <a class="button is-link" href="{{ url('/register') }}"> Not yet register?</a>
+                    </p>
+                </form>
             </div>
+          </div>
         </div>
     </div>
+</div>
 </div>

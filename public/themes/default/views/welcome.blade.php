@@ -1,18 +1,10 @@
+<div class="content">
 
-<h1>System <small>a simple boilerplate for your application</small></h1>
+    {!! Theme::partial('elements.box', ['title' => 'Manage your user\'s roles with Laratrust','content' => 'Configure roles and permissions with <a href="https://github.com/santigarcor/laratrust">Laratrust</a>']) !!}
 
-<h3>Bundle with</h3>
-<ul class="list-group">
-    <li class="list-group-item">
-        <a href="https://github.com/santigarcor/laratrust">Laratrust</a>
-    </li>
-    <li class="list-group-item">
-        <a href="https://laravelcollective.com/docs/5.3/html">Laravel Collective</a>
-    </li>
-    <li class="list-group-item">
-        <a href="https://github.com/teepluss/laravel-theme">Laravel Theme</a>
-    </li>
-    <li class="list-group-item">
-    	<a href="https://github.com/tymondesigns/jwt-auth">JWT</a>
-    </li>
-</ul>
+    {!! Theme::partial('elements.box', ['title' => 'Speed up create your forms with Laravel Collective', 'content' => 'Speed up your form creations with <a href="https://laravelcollective.com/docs/5.3/html">Laravel Collective</a> helpers.']) !!}
+
+    {!! Theme::partial('elements.box', ['title' => 'Create Multiple Themes', 'content' => 'You may want to create multiple themes and use for different users with <a href="https://github.com/teepluss/laravel-theme">Laravel Theme</a>.']) !!}
+
+    {!! Theme::partial('elements.box', ['title' => 'Secure your API Connection with JWT', 'content' => 'API is a must these days and <a href="https://github.com/tymondesigns/jwt-auth">JWT</a> is pre-configured in this boilerplate!']) !!}
+</div>
