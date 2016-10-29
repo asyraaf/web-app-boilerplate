@@ -58,5 +58,6 @@ class Kernel extends HttpKernel
         'active' => \App\Http\Middleware\CheckAccountActivation::class,
         'jwt.auth' => \Tymon\JWTAuth\Middleware\GetUserFromToken::class,
         'jwt.refresh' => \Tymon\JWTAuth\Middleware\RefreshToken::class,
+        'theme' => \App\Http\Middleware\ThemeLoader::class,
     ];
 }

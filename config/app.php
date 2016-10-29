@@ -14,6 +14,17 @@ return [
 
     'name' => 'System',
 
+    'themes' => [
+        'default' => [
+            'name' => 'default',
+            'layout' => 'default',
+        ],
+        'admin' => [
+            'name' => 'admin',
+            'layout' => 'default',
+        ],
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -171,6 +182,7 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Teepluss\Theme\ThemeServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -234,6 +246,8 @@ return [
         'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Theme' => Teepluss\Theme\Facades\Theme::class,
+
     ],
 
 ];
