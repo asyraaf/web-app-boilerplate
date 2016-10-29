@@ -16,9 +16,11 @@ Route::group(['middleware' => 'theme'], function () {
         return view('welcome');
     });
 
-    Auth::routes();
-
     Route::get('/account/activate/{token}', 'AccountController@activate');
+});
+
+Route::group(['middleware' => ['theme:default,blank']], function () {
+    Auth::routes();
 });
 
 Route::group(
