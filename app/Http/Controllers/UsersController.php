@@ -62,6 +62,7 @@ class UsersController extends Controller
                 $user->attachRole($value);
             }
         }
+        flash('New user has been created.', 'success');
         return redirect('/users');
     }
 
@@ -108,6 +109,7 @@ class UsersController extends Controller
                 $user->attachRole($value);
             }
         }
+        flash('User details has been updated.', 'success');
         return redirect('/users');
     }
 
@@ -136,7 +138,7 @@ class UsersController extends Controller
         $user->password = bcrypt($password);
         $user->save();
 
-        session()->flash('message', 'You password has been update.');
+        flash('Your password has been update.', 'success');
 
         return redirect()->back();
     }

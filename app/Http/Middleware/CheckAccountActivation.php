@@ -21,8 +21,7 @@ class CheckAccountActivation
                 return response()->json(['error' => 'Account is not yet activated'], 401);
             } else {
                 Auth::logout();
-                session()->flash('message', 'Please activate your account.');
-                session()->flash('error', 1);
+                flash('Please activate your account.', 'danger');
                 return redirect('/');
             }
         }
