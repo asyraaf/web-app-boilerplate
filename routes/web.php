@@ -11,24 +11,19 @@
 |
  */
 // theme configuration can be use app.themes.default for default while app.themes.admin for admin
-Route::group(['middleware' => 'theme'], function () {
-    Route::get('/', function (Request $request) {
-        return view('welcome');
-    });
-
-    Route::get('/account/activate/{token}', 'AccountController@activate');
+Route::get('/', function (Request $request) {
+    return view('welcome');
 });
 
-Route::group(['middleware' => ['theme:default,blank']], function () {
-    Auth::routes();
-});
+Route::get('/account/activate/{token}', 'AccountController@activate');
+
+Auth::routes();
 
 Route::group(
     [
         'middleware' => [
             'active',
             'auth',
-            'theme:' . config('app.themes.admin.name') . ',' . config('app.themes.admin.layout'),
         ],
     ], function () {
         Route::get('dashboard', 'HomeController@index');
