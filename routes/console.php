@@ -21,15 +21,3 @@ Artisan::command('reset:password', function () {
     DB::table('users')->update(['password' => bcrypt('password')]);
     $this->info('All users password has been reset to default - password');
 })->describe('Reset all users password to default. Default passwor is password.');
-
-Artisan::command('clear:cache', function () {
-    $this->call('config:cache');
-    $this->call('route:clear');
-    $this->call('view:clear');
-    $this->call('optimize');
-})->describe('Clean up cache files');
-
-Artisan::command('clear:serve', function () {
-    $this->call('clear:cache');
-    $this->call('serve');
-})->describe('Clean up cache files and serve the application');
