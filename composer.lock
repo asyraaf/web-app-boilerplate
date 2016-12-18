@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b0b502d118a4c429d366b4ee257a6ba8",
-    "content-hash": "bbd50783526ac6e983cd890d39bd0c6a",
+    "hash": "c30c291790b208b94c3d4dabe52d8410",
+    "content-hash": "1d010530200d0806b3f896b321b27b3b",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -3016,122 +3016,6 @@
                 "dump"
             ],
             "time": "2016-12-08 14:58:14"
-        },
-        {
-            "name": "teepluss/theme",
-            "version": "2.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/teepluss/laravel-theme.git",
-                "reference": "1677d7289390f55a736cc979e3f32c099b7c363f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/teepluss/laravel-theme/zipball/1677d7289390f55a736cc979e3f32c099b7c363f",
-                "reference": "1677d7289390f55a736cc979e3f32c099b7c363f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "twig/twig": "1.x"
-            },
-            "require-dev": {
-                "illuminate/support": ">=5.0.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Teepluss\\Theme\\": "src/"
-                },
-                "classmap": [
-                    "src/Exceptions.php"
-                ],
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Teepluss",
-                    "email": "admin@laravel.in.th"
-                }
-            ],
-            "description": "Theme will help you organize your themes inside Laravel projects easily and maintain its related assets, layouts and partials for the theme in single directory.",
-            "homepage": "https://github.com/teepluss/laravel-theme",
-            "keywords": [
-                "asset",
-                "laravel",
-                "layout",
-                "theme",
-                "twig",
-                "widget"
-            ],
-            "time": "2016-10-26 03:34:46"
-        },
-        {
-            "name": "twig/twig",
-            "version": "v1.29.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/twigphp/Twig.git",
-                "reference": "74f723e542368ca2080b252740be5f1113ebb898"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/74f723e542368ca2080b252740be5f1113ebb898",
-                "reference": "74f723e542368ca2080b252740be5f1113ebb898",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.7"
-            },
-            "require-dev": {
-                "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.2@dev"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.29-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Twig_": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Armin Ronacher",
-                    "email": "armin.ronacher@active-4.com",
-                    "role": "Project Founder"
-                },
-                {
-                    "name": "Twig Team",
-                    "homepage": "http://twig.sensiolabs.org/contributors",
-                    "role": "Contributors"
-                }
-            ],
-            "description": "Twig, the flexible, fast, and secure template language for PHP",
-            "homepage": "http://twig.sensiolabs.org",
-            "keywords": [
-                "templating"
-            ],
-            "time": "2016-12-13 17:28:18"
         },
         {
             "name": "tymon/jwt-auth",
