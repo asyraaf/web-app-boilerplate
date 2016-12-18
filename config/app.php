@@ -182,9 +182,10 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        Teepluss\Theme\ThemeServiceProvider::class,
+        // Teepluss\Theme\ThemeServiceProvider::class,
         CleaniqueCoders\ArtisanExtended\ArtisanExtendedServiceProvider::class,
         CleaniqueCoders\Providers\SettingServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -248,7 +249,7 @@ return [
         'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Theme' => Teepluss\Theme\Facades\Theme::class,
+        // 'Theme' => Teepluss\Theme\Facades\Theme::class,
 
     ],
 
