@@ -63,21 +63,22 @@
         },
         {
             "name": "cleaniquecoders/artisan-extended",
-            "version": "v1.0.9",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cleaniquecoders/artisan-extended.git",
-                "reference": "6bd79ad3803b9372037f8c0bb1396b06f240f587"
+                "reference": "096c119bfd8530216f5a0c994ea6efc97e5c802a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cleaniquecoders/artisan-extended/zipball/6bd79ad3803b9372037f8c0bb1396b06f240f587",
-                "reference": "6bd79ad3803b9372037f8c0bb1396b06f240f587",
+                "url": "https://api.github.com/repos/cleaniquecoders/artisan-extended/zipball/096c119bfd8530216f5a0c994ea6efc97e5c802a",
+                "reference": "096c119bfd8530216f5a0c994ea6efc97e5c802a",
                 "shasum": ""
             },
             "require": {
                 "illuminate/console": "5.3.*",
-                "illuminate/support": "5.3.*"
+                "illuminate/support": "5.3.*",
+                "laracasts/flash": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -96,7 +97,7 @@
                 }
             ],
             "description": "Laravel Artisan Extended Commands",
-            "time": "2016-12-14 01:25:03"
+            "time": "2016-12-18 16:32:54"
         },
         {
             "name": "cleaniquecoders/setting",
