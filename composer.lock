@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c30c291790b208b94c3d4dabe52d8410",
-    "content-hash": "1d010530200d0806b3f896b321b27b3b",
+    "hash": "c94fc7c4538e5e0a192c692dbb146ef1",
+    "content-hash": "bedb29340bc66eecb2b9cba4f0cd7b7f",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -134,6 +134,43 @@
             ],
             "description": "Laravel Setting Helper",
             "time": "2016-11-23 07:55:28"
+        },
+        {
+            "name": "cleaniquecoders/themer",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cleaniquecoders/themer.git",
+                "reference": "a6dbdfab4c2ff44bac4035cfdf767f553e5a7012"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cleaniquecoders/themer/zipball/a6dbdfab4c2ff44bac4035cfdf767f553e5a7012",
+                "reference": "a6dbdfab4c2ff44bac4035cfdf767f553e5a7012",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "5.3.*",
+                "illuminate/http": "5.3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CleaniqueCoders\\Themer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nasrul Hazim",
+                    "email": "nasrulhazim.m@gmail.com"
+                }
+            ],
+            "description": "Laravel Theme Maker",
+            "time": "2016-12-18 18:47:36"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
