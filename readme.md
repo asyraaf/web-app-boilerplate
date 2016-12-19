@@ -46,44 +46,30 @@ You should get something like this once you're successfully logged in.
 
 ## Themes
 
-This web app boilerplate comes with pre-installed and configured with Laravel Theme by [teeplus](https://github.com/teepluss/laravel-theme). Following are common commands can be use for theme development.
+This web app boilerplate comes with pre-installed and configured with Laravel Theme Maker, [Themer](https://github.com/cleaniquecoders/themer). 
 
-### Create a new theme
+Following are common commands can be use for theme development.
+
+### Create a new theme skeleton
 
 ```
-php artisan theme:create theme_name
+php artisan make:theme name
 ```
+
+Your theme will be under `resources/views/themes` directory.
 
 ### Middleware
 
-The `teeplus/laravel-theme` does not come with a middleware. 
-
-With this middleware, you still can use `return view('home.index')` in your controller.
-
-#### Usage
+The [Themer](https://github.com/cleaniquecoders/themer) provide a middleware for you to load the target theme for particular route. 
 
 ```php
-Route::get('dashboard','HomeController@index')->middleware('theme');
+Route::get('dashboard','HomeController@index')->middleware('theme:public');
 ```
 
 OR
 
 ```php
-Route::get('dashboard','HomeController@index')->middleware('theme:theme_name,layout_name');
-```
-
-### Assets and Components
-
-To include assets
-
-```php
-{{ Theme::asset()->container('footer')->add('delete-script', 'js/delete.js') }}
-```
-
-To include partials or components
-
-```php
-{!! Theme::partial('components.checkboxes',['options' => $roles,'label' => 'Role', 'selected' => [], 'name' => 'role_id']) !!}
+Route::get('dashboard','HomeController@index')->middleware('theme:admin');
 ```
 
 ## TODO
@@ -97,4 +83,4 @@ To include partials or components
 - [x] Login with Facebook
 - [x] JWT
 - [x] Laravel Collective
-- [ ] Support Themes
+- [x] Support Themes
